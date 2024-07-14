@@ -33,6 +33,7 @@ function Feed() {
       (post) =>
         value === "" ||
         post.tag.includes(value) ||
+        post.prompt.includes(value) ||
         post.creator.username.includes(value)
     );
     setDisplayedPosts(filteredPosts);
