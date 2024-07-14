@@ -87,7 +87,7 @@ function Nav() {
             {toggleDrodown && (
               <div className="dropdown">
                 <Link
-                  href={"/progile"}
+                  href={"/profile"}
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
