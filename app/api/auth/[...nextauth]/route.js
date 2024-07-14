@@ -15,7 +15,6 @@ const handler = NextAuth({
       try {
         await connectToDatabase();
         const sessionUser = await User.findOne({ email: session.user.email });
-        console.log("sessionUser==>", sessionUser)
         session.user.id = sessionUser._id.toString();
         return session;
       } catch (error) {
@@ -23,7 +22,6 @@ const handler = NextAuth({
       }
     },
     async signIn({ profile }) {
-      console.log("profile==>", profile)
       try {
         await connectToDatabase();
 
